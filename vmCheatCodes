@@ -60,13 +60,13 @@ interface CheatCodes {
         bool reverted;
     }
 
-    // Derives a private key from the name, labels the account with that name, and returns the wallet
+    // Derives a private key from the name, labels the account with that name and returns the wallet
     function createWallet(string calldata) external returns (Wallet memory);
 
     // Generates a wallet from the private key and returns the wallet
     function createWallet(uint256) external returns (Wallet memory);
 
-    // Generates a wallet from the private key, labels the account with that name, and returns the wallet
+    // Generates a wallet from the private key, labels the account with that name and returns the wallet
     function createWallet(uint256, string calldata) external returns (Wallet memory);
 
     // Signs data, (Wallet, digest) => (v, r, s)
